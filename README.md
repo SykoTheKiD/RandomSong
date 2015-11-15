@@ -1,6 +1,6 @@
 # Random Song #
 
-Find Random Songs to listen to via <http://jaysyko.com.com/projects/RandomSong/>
+Find Random Songs to listen to via <http://jaysyko.com/projects/RandomSong/>
 
 
 ### How do I get set up? ###
