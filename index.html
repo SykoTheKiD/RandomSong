@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Song</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+    <script id="results-template" type="text/x-handlebars-template">
+        {{#each albums.items}}
+        <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+        {{/each}}
+    </script>
+    <script id="related-template" type="text/x-handlebars-template">
+        <h2>Related Albums</h2> {{#each albums.items}}
+        <div style="background-image:url({{images.1.url}})" data-album-id="{{id}}" album-name="{{name}}" class="related-cover tooltip"></div>
+        {{/each}}
+    </script>
+    <div id="container"></div>
+    <div class="container">
+        <div id="results"></div>
+        <div class="track-info">
+            <div class="c2p">
+                Click Cover Art to Play
+            </div><span class="describe">Track</span>
+            <div id="track-title"></div><span class="describe">Album</span>
+            <div id="track-album"></div><span class="describe">Artist</span>
+            <div id="track-artist"></div>
+            <br>
+            <button id="newSong" onclick="newSong()">New Song</button>
+        </div>
+        <div class="share">
+            SHARE
+            <br>
+            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=jaysyko.com/randomsong">
+                <i class="fa fa-facebook-official fa-2x"></i> Share</a>
+            <br>
+            <a class="twitter-share-button" data-size="large" data-text="I just found new music using the Random Song Finder via" data-url="http://jaysyko.com/randomsong" href="https://twitter.com/share">Tweet</a>
+            <script>
+                ! function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + '://platform.twitter.com/widgets.js';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, 'script', 'twitter-wjs');
+            </script>
+        </div>
+    </div>
+    <div class="artist-bio">
+        <h2>The Random Song Generator</h2> The Random Song Generator is is powered by Spotify and gets you short clips of new music for you to listen to. Discover new artists, songs and albums and explore music. With the Random Song Generator you can:
+        <ul>
+            <li>Find a completely new song you may like</li>
+            <li>Share the song on Facebook or Twitter</li>
+            <li>Discover related tracks to the one you discovered</li>
+        </ul>
+        If there is anything you would like to see added you can tweet me <a href="https://twitter.com/Jay_094">@Jay_094</a> and I'll see if I can make it happen.
+    </div>
+    <div id="related-albums">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" type="text/javascript">
+    </script>
+    <script src="js/bundle.js" type="text/javascript">
+    </script>
+</body>
+
+</html>

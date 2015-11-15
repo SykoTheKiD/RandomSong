@@ -1,0 +1,152 @@
+html,
+body {
+    padding: 20px;
+    font-family: 'Montserrat',sans-serif;
+    color: #fff;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a {
+    text-decoration: none;
+    color: #55acee;
+}
+a:visited { color: #55acee }
+a:hover { background-color: #292f33 }
+#search-form,
+.form-control { margin-bottom: 20px }
+.cover {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    background-size: cover;
+}
+.cover:hover { cursor: pointer }
+.cover.playing { border: 5px solid #23CF5F }
+#results {
+    left: 37%;
+    top: 2%;
+}
+.track-info {
+    font-size: large;
+    position: relative;
+    background-color: #333A37;
+    padding: 3%;
+    width: 94.2%;
+    display: inline-block;
+    padding-bottom: 2%;
+}
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+button {
+    background: #23CF5F;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: white;
+}
+button:hover { background: #66DE90 }
+.container {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    float: left;
+}
+.share {
+    height: 30%;
+    margin-top: 5%;
+    font-size: large;
+    position: relative;
+    background-color: #333A37;
+    width: 94.5%;
+    display: inline-block;
+    padding: 1%;
+    padding-left: 4%;
+    line-height: 45px;
+}
+.describe { font-size: 60% }
+.c2p {
+    font-size: 70%;
+    font-weight: 700;
+}
+.facebook {
+    text-decoration: none;
+    color: #fff;
+}
+.artist-bio {
+    position: relative;
+    z-index: 9999;
+    margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.1%;
+    padding-bottom: 1%;
+    background-color: #1A1313;
+    width: 60%;
+    left: -15%;
+    line-height: 150%;
+}
+#related-albums {
+    position: relative;
+    z-index: 9999;
+    margin-left: 57%;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    background-color: #1A1313;
+    width: 64%;
+    right: 22%;
+    line-height: 150%;
+    margin-top: 5.5%;
+}
+.related-cover {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-size: cover;
+    padding: 1%;
+    left:5%;
+}
+.related-cover:hover { cursor: pointer }
+.tooltip { position: relative }
+.tooltip:hover:before {
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+.tooltip:hover:after {
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(album-name);
+    left: 0%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
